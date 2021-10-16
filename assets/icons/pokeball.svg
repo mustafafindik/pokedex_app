@@ -1,0 +1,16 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill="none">
+ <defs>
+  <filter id="svg_3_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" fill="#4F4F4F" d="m21.9012,13l-5.0506,0c-0.4633,2.2822 -2.481,4 -4.9,4c-2.41893,0 -4.43669,-1.7178 -4.89996,-4l-5.05064,0c0.50172,5.0533 4.76528,9 9.9506,9c5.1854,0 9.4489,-3.9467 9.9506,-9z"/>
+  <path id="svg_2" fill="#4F4F4F" d="m21.9012,11c-0.5017,-5.05332 -4.7652,-9 -9.9506,-9c-5.18532,0 -9.44888,3.94668 -9.9506,9l5.05064,0c0.46327,-2.28224 2.48103,-4 4.89996,-4c2.419,0 4.4367,1.71776 4.9,4l5.0506,0z"/>
+  <path stroke-dasharray="5,2,2,2" filter="url(#svg_3_blur)" id="svg_3" fill-rule="evenodd" fill="#4F4F4F" d="m11.99998,15c1.6569,0 3,-1.3431 3,-3c0,-1.6569 -1.3431,-3 -3,-3c-1.6568,0 -2.99998,1.3431 -2.99998,3c0,1.6569 1.34318,3 2.99998,3zm1.5,-3c0,0.8284 -0.6715,1.5 -1.5,1.5c-0.8284,0 -1.5,-0.6716 -1.5,-1.5c0,-0.8284 0.6716,-1.5 1.5,-1.5c0.8285,0 1.5,0.6716 1.5,1.5z" clip-rule="evenodd"/>
+  <ellipse ry="0.37499" rx="0.21874" id="svg_6" cy="11.37441" cx="11.28127" stroke-dasharray="5,2,2,2" fill="#4F4F4F"/>
+  <ellipse ry="1.68746" rx="1.7812" id="svg_9" cy="11.93689" cx="12.03125" stroke-dasharray="5,2,2,2" fill="#4F4F4F"/>
+  <ellipse id="svg_10" cy="15.6868" cx="37.81185" stroke-dasharray="5,2,2,2" fill="#4F4F4F"/>
+ </g>
+</svg>
