@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pokedex_app/components/type_card.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/data/pokemon_data.dart';
 import 'package:pokedex_app/screens/detail/detail_screen.dart';
@@ -86,7 +87,7 @@ class PokedexPage extends StatelessWidget {
               padding: const EdgeInsets.all(0),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                childAspectRatio: 1.25,
+                childAspectRatio: 1.15,
               ),
               itemCount: pokemonList.length,
               itemBuilder: (context, index) {
@@ -136,23 +137,14 @@ class PokedexPage extends StatelessWidget {
                                         fontWeight: FontWeight.w600),
                                   ),
                                   FractionallySizedBox(
-                                    widthFactor: 0.4,
+                                    widthFactor: 0.44,
                                     child: ListView.builder(
                                         physics: const NeverScrollableScrollPhysics(),
                                         shrinkWrap: true, //just set this property
                                         padding: const EdgeInsets.all(0),
                                         itemCount: pokemon.types.length,
                                         itemBuilder: (context, i) {
-                                          return Container(
-                                            margin: EdgeInsets.symmetric(vertical: kDefaultPadding/4)
-                                              ,decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(10),
-                                                color: Colors.white.withOpacity(0.2),
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsets.symmetric(vertical: kDefaultPadding/4,horizontal: kDefaultPadding/3),
-                                                child: Text(pokemon.types[i],style: TextStyle(color: Colors.white,fontSize: 10),),
-                                              ));
+                                          return TypeCard(type: pokemon.types[i]);
                                         }),
                                   ),
                                 ],
@@ -190,3 +182,5 @@ class PokedexPage extends StatelessWidget {
     );
   }
 }
+
+

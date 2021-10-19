@@ -6,6 +6,7 @@ class Pokemon{
   late String image;
   late List<String> types;
   late Color? color;
+  late String species;
 
-  Pokemon(this.id, this.name, this.image, this.types, this.color);
+  Pokemon(this.id, this.name, this.image, this.types, this.color,this.species);
 }
