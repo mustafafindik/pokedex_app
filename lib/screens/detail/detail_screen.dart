@@ -69,7 +69,7 @@ class DetailPage extends StatelessWidget {
                             padding:
                                 const EdgeInsets.only(top: kDefaultPadding / 4),
                             height: kDefaultPadding * 2,
-                            width: size.width / 2.60,
+                            width: size.width / 2.5,
                             child: GridView.builder(
                                 gridDelegate:
                                     const SliverGridDelegateWithFixedCrossAxisCount(
@@ -123,10 +123,13 @@ class DetailPage extends StatelessWidget {
                 bottom: 25,
                 child: SizedBox(
                   width: size.width,
-                  child: SizedBox(
-                    height: 150,
-                      width: 150,
-                      child: Image.asset(pokemon.image)),
+                  child: Hero(
+                    tag:pokemon.id,
+                    child: SizedBox(
+                      height: 150,
+                        width: 150,
+                        child: Image.asset(pokemon.image)),
+                  ),
                 ),
               )
             ],

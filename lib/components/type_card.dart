@@ -20,7 +20,7 @@ class TypeCard extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(
-              vertical: kDefaultPadding / 7, horizontal: kDefaultPadding / 3),
+              vertical: kDefaultPadding / 6, horizontal: kDefaultPadding / 3),
           child: Text(
             type,
             style: const TextStyle(color: Colors.white, fontSize: 11),
