@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pokedex_app/components/my_tabbar.dart';
 import 'package:pokedex_app/components/type_card.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/models/pokemon.dart';
@@ -138,6 +139,7 @@ class DetailPage extends StatelessWidget {
             child: Container(
               width: size.width,
               color: Colors.white,
+              //child: MyTabBar(),
             ),
           ),
         ],
