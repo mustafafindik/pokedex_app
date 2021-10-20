@@ -33,7 +33,8 @@ class _MyTabBarState extends State<MyTabBar> with TickerProviderStateMixin {
         TabBar(
           controller: tabController,
           indicatorColor: widget.pokemon.color!.withOpacity(0.5),
-          indicatorPadding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          indicatorPadding:
+              const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           indicatorWeight: 3.0,
           indicatorSize: TabBarIndicatorSize.tab,
           tabs: [
@@ -59,12 +60,10 @@ class _MyTabBarState extends State<MyTabBar> with TickerProviderStateMixin {
               padding: const EdgeInsets.only(bottom: 10),
               child: Text("Evolution",
                   style: TextStyle(
-                      color: tabController.index == 2
-                          ? kTextColor
-                          : kLightTextColor,
-                     )),
+                    color:
+                        tabController.index == 2 ? kTextColor : kLightTextColor,
+                  )),
             ),
-
           ],
         ),
         Expanded(
@@ -86,7 +85,6 @@ class _MyTabBarState extends State<MyTabBar> with TickerProviderStateMixin {
               child: Text("Evolution",
                   style: TextStyle(color: kLightTextColor, fontSize: 16)),
             ),
-
           ]),
         )
       ],
