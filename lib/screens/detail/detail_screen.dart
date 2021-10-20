@@ -138,8 +138,12 @@ class DetailPage extends StatelessWidget {
           Expanded(
             child: Container(
               width: size.width,
-              color: Colors.white,
-              //child: MyTabBar(),
+              decoration: BoxDecoration(
+                border: Border.all(width: 0,color: Colors.white),
+                color: Colors.white,
+              ),
+
+              child: MyTabBar(pokemon: pokemon,),
             ),
           ),
         ],

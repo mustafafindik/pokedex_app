@@ -11,6 +11,7 @@ class TypeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return
     Card(
         elevation: 0,
@@ -23,7 +24,7 @@ class TypeCard extends StatelessWidget {
               vertical: kDefaultPadding / 6, horizontal: kDefaultPadding / 3),
           child: Text(
             type,
-            style: const TextStyle(color: Colors.white, fontSize: 11),
+            style:  TextStyle(color: Colors.white, fontSize: (size.width*.03)),
           ),
         ),);
   }
