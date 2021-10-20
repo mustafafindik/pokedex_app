@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:pokedex_app/models/stat.dart';
+
 class Pokemon{
   late String id;
   late String name;
@@ -7,6 +9,10 @@ class Pokemon{
   late List<String> types;
   late Color? color;
   late String species;
+  late String about;
+  late Stat stat;
+  late String height;
+  late String weight;
 
-  Pokemon(this.id, this.name, this.image, this.types, this.color,this.species);
+  Pokemon(this.id, this.name, this.image, this.types, this.color,this.species,this.about,this.height,this.weight,this.stat);
 }
