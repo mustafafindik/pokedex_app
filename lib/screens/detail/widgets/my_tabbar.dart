@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/models/pokemon.dart';
+import 'package:pokedex_app/screens/detail/widgets/my_tabbar_header.dart';
 
 class MyTabBar extends StatefulWidget {
   const MyTabBar({
@@ -30,42 +31,7 @@ class _MyTabBarState extends State<MyTabBar> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TabBar(
-          controller: tabController,
-          indicatorColor: widget.pokemon.color!.withOpacity(0.5),
-          indicatorPadding:
-              const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-          indicatorWeight: 3.0,
-          indicatorSize: TabBarIndicatorSize.tab,
-          tabs: [
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Text(
-                "About",
-                style: TextStyle(
-                  color:
-                      tabController.index == 0 ? kTextColor : kLightTextColor,
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Text("Stats",
-                  style: TextStyle(
-                      color: tabController.index == 1
-                          ? kTextColor
-                          : kLightTextColor)),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Text("Evolution",
-                  style: TextStyle(
-                    color:
-                        tabController.index == 2 ? kTextColor : kLightTextColor,
-                  )),
-            ),
-          ],
-        ),
+        MyTabBarHeader(tabController: tabController, color: widget.pokemon.color),
         Expanded(
           child: TabBarView(controller: tabController, children: [
             Container(
@@ -91,3 +57,7 @@ class _MyTabBarState extends State<MyTabBar> with TickerProviderStateMixin {
     );
   }
 }
+
+
+
+
