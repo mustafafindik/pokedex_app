@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/models/pokemon.dart';
+import 'package:pokedex_app/screens/detail/widgets/about_view.dart';
+import 'package:pokedex_app/screens/detail/widgets/evolution_view.dart';
 import 'package:pokedex_app/screens/detail/widgets/my_tabbar_header.dart';
+import 'package:pokedex_app/screens/detail/widgets/stat_view.dart';
 
 class MyTabBar extends StatefulWidget {
   const MyTabBar({
@@ -33,24 +35,10 @@ class _MyTabBarState extends State<MyTabBar> with TickerProviderStateMixin {
       children: [
         MyTabBarHeader(tabController: tabController, color: widget.pokemon.color),
         Expanded(
-          child: TabBarView(controller: tabController, children: [
-            Container(
-              color: Colors.red,
-              child: Text(
-                "About",
-                style: TextStyle(color: kLightTextColor, fontSize: 16),
-              ),
-            ),
-            Container(
-              color: Colors.indigo,
-              child: Text("Stats",
-                  style: TextStyle(color: kLightTextColor, fontSize: 16)),
-            ),
-            Container(
-              color: Colors.teal,
-              child: Text("Evolution",
-                  style: TextStyle(color: kLightTextColor, fontSize: 16)),
-            ),
+          child: TabBarView(controller: tabController, children:  [
+            AboutView(pokemon: widget.pokemon,),
+            StatView(pokemon: widget.pokemon,),
+            EvolutionView(pokemon: widget.pokemon,)
           ]),
         )
       ],

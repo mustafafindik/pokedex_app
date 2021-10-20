@@ -13,6 +13,7 @@ class Pokemon{
   late Stat stat;
   late String height;
   late String weight;
+  late List<String> weakness;
 
-  Pokemon(this.id, this.name, this.image, this.types, this.color,this.species,this.about,this.height,this.weight,this.stat);
+  Pokemon(this.id, this.name, this.image, this.types, this.color,this.species,this.about,this.height,this.weight,this.stat,this.weakness);
 }

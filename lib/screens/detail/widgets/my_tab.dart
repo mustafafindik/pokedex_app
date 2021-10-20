@@ -21,6 +21,7 @@ class MyTab extends StatelessWidget {
         style: TextStyle(
           color:
           index == tabIndex ? kTextColor : kLightTextColor,
+          fontWeight: FontWeight.w600
         ),
       ),
     );
