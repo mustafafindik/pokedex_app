@@ -26,7 +26,7 @@ List<Pokemon> getPokemonList() {
       "Venusaur is a squat, quadrupedal Pokémon with bumpy, blue-green skin. It has small, circular red eyes; a short, blunt snout; and a wide mouth with two pointed teeth in the upper jaw and four in the lower jaw. On top of its head are small, pointed ears with reddish pink insides. It has three clawed toes on each foot. The bud on its back has bloomed into a large pink, white-spotted flower. The flower is supported by a thick, brown trunk surrounded by green fronds. A female Venusaur will have a seed in the center of its flower.",
       "6’07” (200.1 cm)","220.5 lb (100 kg)",Stat(80, 82, 83, 100, 100, 80),
       ["assets/types/Fire.png","assets/types/Psychic.png","assets/types/Flying.png","assets/types/Ice.png"],
-      []
+      [EvolutionChain("assets/images/Venusaur.png", "assets/images/MegaVenusaur.png")]
   ));
 
   pokemonList.add(Pokemon("#004", "Charmander", "assets/images/Charmander.png",
@@ -51,7 +51,7 @@ List<Pokemon> getPokemonList() {
       "Charizard is a draconic, bipedal Pokémon. It is primarily orange with a cream underside from the chest to the tip of its tail. It has a long neck, small blue eyes, slightly raised nostrils, and two horn-like structures protruding from the back of its rectangular head. There are two fangs visible in the upper jaw when its mouth is closed. Two large wings with blue-green undersides sprout from its back, and a horn-like appendage juts out from the top of the third joint of each wing. ",
       "5’7” (170.2 cm)","199.5 lb (90.5 kg)",Stat(78, 84, 78, 109, 85, 100),
       ["assets/types/Water.png","assets/types/Ground.png","assets/types/Rock.png"],
-      []
+      [EvolutionChain("assets/images/Charizard.png", "assets/images/MegaCharizardY.png"),EvolutionChain("assets/images/Charizard.png", "assets/images/MegaCharizardX.png")]
   ));
 
   pokemonList.add(Pokemon("#007", "Squirtle", "assets/images/Squirtle.png",
@@ -75,7 +75,7 @@ List<Pokemon> getPokemonList() {
       "Blastoise is a large, bipedal turtle-like Pokémon. Its body is blue and is mostly hidden by its tough, brown shell. This shell has a cream-colored underside and a white ridge encircling its arms and separating the upper and lower halves. Two powerful water cannons reside at the top of its shell over its shoulders. These cannons can be extended or withdrawn. Blastoise's head has triangular ears that are black on the inside, small brown eyes, and a cream-colored lower jaw. ",
       "5’03” (160 cm)","118.5 lb (85.5 kg)",Stat(79, 83, 100, 85, 105, 78),
       ["assets/types/Grass.png","assets/types/Electric.png"],
-      []
+      [EvolutionChain("assets/images/Blastoise.png", "assets/images/MegaBlastoise.png")]
   ));
 
   pokemonList.add(Pokemon("#010", "Pikachu", "assets/images/Pikachu.png",
