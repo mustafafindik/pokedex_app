@@ -59,17 +59,12 @@ class PokemonCard extends StatelessWidget {
                             fontSize: 15,
                             fontWeight: FontWeight.w600),
                       ),
-                      FractionallySizedBox(
-                        widthFactor: 0.44,
-                        child: ListView.builder(
-                            physics: const NeverScrollableScrollPhysics(),
-                            shrinkWrap: true, //just set this property
-                            padding: const EdgeInsets.all(0),
-                            itemCount: pokemon.types.length,
-                            itemBuilder: (context, i) {
-                              return TypeCard(type: pokemon.types[i]);
-                            }),
-                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: pokemon.types.map(
+                                (type) => TypeCard(type: type)).toList(),
+                      )
+
                     ],
                   ),
                 ),

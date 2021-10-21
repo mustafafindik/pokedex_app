@@ -71,18 +71,11 @@ class DetailPage extends StatelessWidget {
                                 const EdgeInsets.only(top: kDefaultPadding / 4),
                             height: kDefaultPadding * 2,
                             width: size.width / 2.5,
-                            child: GridView.builder(
-                                gridDelegate:
-                                    const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                  childAspectRatio: 2.75,
-                                ),
-                                physics: const NeverScrollableScrollPhysics(),
-                                padding: const EdgeInsets.all(0),
-                                itemCount: pokemon.types.length,
-                                itemBuilder: (context, i) {
-                                  return TypeCard(type: pokemon.types[i]);
-                                }),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: pokemon.types.map(
+                                      (type) => TypeCard(type: type)).toList(),
+                            )
                           ),
                           Text(pokemon.species,
                               textAlign: TextAlign.center,

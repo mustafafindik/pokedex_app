@@ -78,9 +78,13 @@ class AboutView extends StatelessWidget {
               ),
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: pokemon.weakness.map(
-                      (weakness) => Image.asset(weakness)).toList(),
+                      (weakness) => Padding(
+                        padding: const EdgeInsets.only(right: kDefaultPadding),
+                        child: Image.asset(weakness),
+                      )).toList(),
             )
           ],
           ),

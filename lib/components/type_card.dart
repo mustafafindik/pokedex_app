@@ -24,7 +24,7 @@ class TypeCard extends StatelessWidget {
               vertical: kDefaultPadding / 6, horizontal: kDefaultPadding / 3),
           child: Text(
             type,
-            style:  TextStyle(color: Colors.white, fontSize: (size.width*.03)),
+            style:  TextStyle(color: Colors.white, fontSize: (size.width*.028)),
           ),
         ),);
   }

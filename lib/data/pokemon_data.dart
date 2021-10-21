@@ -81,7 +81,7 @@ List<Pokemon> getPokemonList() {
   pokemonList.add(Pokemon("#010", "Pikachu", "assets/images/Pikachu.png",
       ["Electric"], kElectric, " Mouse Pokemon",
       "Pikachu is a short, chubby rodent Pokémon. It is covered in yellow fur with two horizontal brown stripes on its back. It has a small mouth, long, pointed ears with black tips, and brown eyes. Each cheek is a red circle that contains a pouch for electricity storage. It has short forearms with five fingers on each paw, and its feet each have three toes. At the base of its lightning bolt-shaped tail is a patch of brown fur. A female will have a V-shaped notch at the end of its tail, which looks like the top of a heart. ",
-      "1’4” (40.6 cm)","13.2 lb (6 kg)",Stat(2, 2, 3, 4, 5, 6),
+      "1’4” (40.6 cm)","13.2 lb (6 kg)",Stat(35, 55, 40, 50, 50, 90),
       ["assets/types/Ground.png"],
       [EvolutionChain("assets/images/Pikachu.png", "assets/images/Raichu.png")]
   ));

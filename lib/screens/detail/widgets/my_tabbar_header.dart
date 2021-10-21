@@ -21,7 +21,7 @@ class MyTabBarHeader extends StatelessWidget {
       indicatorWeight: 3.0,
       indicatorSize: TabBarIndicatorSize.tab,
       tabs: [
-        MyTab(index: tabController.index,title: "About",tabIndex: 0,),
+        MyTab(index: tabController.index,title: "About     ",tabIndex: 0,),
         MyTab(index: tabController.index,title: "Stats",tabIndex: 1,),
         MyTab(index: tabController.index,title: "Evolution",tabIndex: 2,),
       ],
