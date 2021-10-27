@@ -13,11 +13,12 @@ class PokemonGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    var ori = MediaQuery.of(context).orientation;
     var pokemonList = getPokemonList();
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-      height: size.height * 0.75,
+      height: ori == Orientation.portrait? size.height * 0.75 : size.height * 0.55,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(30),
@@ -26,8 +27,8 @@ class PokemonGrid extends StatelessWidget {
       ),
       child: GridView.builder(
         padding: const EdgeInsets.all(0),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+        gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: ori == Orientation.portrait? 2 :5,
           childAspectRatio: 1.15,
         ),
         itemCount: pokemonList.length,

@@ -11,6 +11,7 @@ class TitleAndAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    var ori = MediaQuery.of(context).orientation;
 
     return Stack(
       children: <Widget>[
@@ -18,7 +19,7 @@ class TitleAndAppBar extends StatelessWidget {
           color: Colors.white,
           width: size.width,
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-          height: size.height * 0.25,
+          height: ori == Orientation.portrait? size.height * 0.25: size.height * 0.45,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

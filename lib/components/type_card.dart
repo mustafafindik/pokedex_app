@@ -12,6 +12,7 @@ class TypeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    var ori = MediaQuery.of(context).orientation;
     return
     Card(
         elevation: 0,
@@ -24,7 +25,7 @@ class TypeCard extends StatelessWidget {
               vertical: kDefaultPadding / 6, horizontal: kDefaultPadding / 3),
           child: Text(
             type,
-            style:  TextStyle(color: Colors.white, fontSize: (size.width*.028)),
+            style:  TextStyle(color: Colors.white, fontSize: ori == Orientation.portrait? (size.width*.028) :(size.height*.028)),
           ),
         ),);
   }
