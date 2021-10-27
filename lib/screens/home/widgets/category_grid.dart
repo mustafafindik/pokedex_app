@@ -10,7 +10,8 @@ class CategoryGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var categories = getCategories();
+
+    var categories = getCategories(context);
     Size size = MediaQuery.of(context).size;
     var ori = MediaQuery.of(context).orientation;
 

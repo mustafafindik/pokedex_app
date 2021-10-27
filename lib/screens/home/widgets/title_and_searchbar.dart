@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/screens/home/widgets/search_bar.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TitleAndSearchBar extends StatelessWidget {
   const TitleAndSearchBar({
@@ -26,8 +27,8 @@ class TitleAndSearchBar extends StatelessWidget {
                SizedBox(
                 height: ori == Orientation.portrait?  size.height*0.13 :size.width*0.13 ,
               ),
-              Text(
-                "What Pokemon \nare you looking for?",
+          Text(
+                AppLocalizations.of(context)!.title,
                 style: Theme.of(context)
                     .textTheme
                     .headline5!

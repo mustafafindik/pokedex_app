@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_app/constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({
@@ -32,12 +33,12 @@ class SearchBar extends StatelessWidget {
           onChanged: (value) {
             print(value);
           },
-          decoration: const InputDecoration(
-            hintText: "Search Pokemon..",
-            hintStyle: TextStyle(color: kIconColor, fontSize: 15),
+          decoration:  InputDecoration(
+            hintText: AppLocalizations.of(context)!.searchText,
+            hintStyle: const TextStyle(color: kIconColor, fontSize: 15),
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
-            prefixIcon: Icon(
+            prefixIcon: const Icon(
               Icons.search,
               color: Colors.black,
             ),

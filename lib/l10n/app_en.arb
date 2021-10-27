@@ -1,0 +1,10 @@
+{
+    "title": "What Pokemon \nare you looking for?",
+    "searchText" : "Search Pokemon...",
+    "pokedex": "Pokedex",
+    "moves": "Moves",
+    "abilities": "Abilities",
+    "items": "Items",
+    "locations": "Locations",
+    "type": "Type"
+}

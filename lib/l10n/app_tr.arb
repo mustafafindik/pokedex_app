@@ -1,0 +1,10 @@
+{
+    "title" : "Hangi Pokemon'u \nArıyorsun?",
+    "searchText" : "Pokemon Ara ...",
+    "pokedex": "Pokedex",
+    "moves": "Hareket",
+    "abilities": "Yetenekler",
+    "items": "Öğeler",
+    "locations": "Konumlar",
+    "type": "Tip"
+}
