@@ -19,12 +19,12 @@ class TitleAndSearchBar extends StatelessWidget {
           color: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           width: size.width,
-          height: ori == Orientation.portrait? size.height * 0.35 : size.height * 0.65 ,
+          height: ori == Orientation.portrait? size.height * 0.35 : size.height * 0.75 ,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const SizedBox(
-                height: 125,
+               SizedBox(
+                height: ori == Orientation.portrait?  size.height*0.13 :size.width*0.13 ,
               ),
               Text(
                 "What Pokemon \nare you looking for?",
@@ -43,7 +43,7 @@ class TitleAndSearchBar extends StatelessWidget {
           child: SvgPicture.asset(
             'assets/icons/pokeball.svg',
             color: Colors.grey.shade200,
-            height: 250,
+            height: ori == Orientation.portrait?  size.height*0.30:size.height*0.55,
           ),
         ),
       ],

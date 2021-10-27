@@ -29,7 +29,7 @@ class PokemonGrid extends StatelessWidget {
         padding: const EdgeInsets.all(0),
         gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: ori == Orientation.portrait? 2 :5,
-          childAspectRatio: 1.15,
+          childAspectRatio: ori == Orientation.portrait?  1.15:1,
         ),
         itemCount: pokemonList.length,
         itemBuilder: (context, index) {

@@ -9,24 +9,28 @@ class EvolutionView extends StatelessWidget {
   final Pokemon pokemon;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white70,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: kDefaultPadding*1.5),
-              child: Text("Evolution Chain",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: pokemon.evolutionChain.map(
-                      (evo) => ChainCard(evolutionChain: evo, color: pokemon.color,)).toList(),
-            )
+    var ori = MediaQuery.of(context).orientation;
 
-          ],
+    return SingleChildScrollView(
+      child: Container(
+        color: Colors.white70,
+        child: Container(
+          padding:  EdgeInsets.symmetric(horizontal: ori == Orientation.portrait? kDefaultPadding:kDefaultPadding*5),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: kDefaultPadding*1.5),
+                child: Text("Evolution Chain",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: pokemon.evolutionChain.map(
+                        (evo) => ChainCard(evolutionChain: evo, color: pokemon.color,)).toList(),
+              )
+
+            ],
+          ),
         ),
       ),
     );

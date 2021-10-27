@@ -9,11 +9,12 @@ class AboutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var ori = MediaQuery.of(context).orientation;
     return SingleChildScrollView(
       child: Container(
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          padding:  EdgeInsets.symmetric(horizontal: ori ==Orientation.portrait? kDefaultPadding :kDefaultPadding* 2),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
           children: [

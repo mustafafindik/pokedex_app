@@ -9,7 +9,7 @@ List<Category> getCategories(){
   categories.add(Category("Abilities", kWater));
   categories.add(Category("Items", kElectric));
   categories.add(Category("Locations", kPoison));
-  categories.add(Category("Type Charts", kEarth));
+  categories.add(Category("Type", kEarth));
 
   return categories;
 }

@@ -14,9 +14,8 @@ class CategoryGrid extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     var ori = MediaQuery.of(context).orientation;
 
-    print(ori);
     return Container(
-      height: ori == Orientation.portrait ? size.height * 0.35 : size.height*0.35,
+      height: ori == Orientation.portrait ? size.height * 0.35 : size.height*0.25,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(30), bottomLeft: Radius.circular(30)),

@@ -10,24 +10,27 @@ class StatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var ori = MediaQuery.of(context).orientation;
 
-    return Container(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding*2),
-        child: Column(
-          children: [
-            const SizedBox(height: 40,),
-            StatCard(title: "HP",statValue: pokemon.stat.hp,),
-            StatCard(title: "Attack",statValue: pokemon.stat.attack,),
-            StatCard(title: "Defence",statValue: pokemon.stat.defense,),
-            StatCard(title: "Sp. Atk",statValue: pokemon.stat.spAtk,),
-            StatCard(title: "Sp. Def",statValue: pokemon.stat.spDef,),
-            StatCard(title: "Speed",statValue: pokemon.stat.speed,),
-            StatCard(title: "Total",statValue: pokemon.stat.getTotal(),),
-          ],
+    return SingleChildScrollView(
+      child: Container(
+        color: Colors.white,
+        child: Padding(
+          padding:  EdgeInsets.symmetric(horizontal: ori ==Orientation.portrait? kDefaultPadding*2:kDefaultPadding*5 ),
+          child: Column(
+            children: [
+              const SizedBox(height: 40,),
+              StatCard(title: "HP",statValue: pokemon.stat.hp,),
+              StatCard(title: "Attack",statValue: pokemon.stat.attack,),
+              StatCard(title: "Defence",statValue: pokemon.stat.defense,),
+              StatCard(title: "Sp. Atk",statValue: pokemon.stat.spAtk,),
+              StatCard(title: "Sp. Def",statValue: pokemon.stat.spDef,),
+              StatCard(title: "Speed",statValue: pokemon.stat.speed,),
+              StatCard(title: "Total",statValue: pokemon.stat.getTotal(),),
+            ],
+          ),
+
         ),
-
       ),
     );
   }

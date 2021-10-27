@@ -13,6 +13,7 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    var ori = MediaQuery.of(context).orientation;
     return Scaffold(
       backgroundColor: pokemon.color,
       appBar: AppBar(
@@ -34,7 +35,7 @@ class DetailPage extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: size.height * .25 + 50,
+                height: ori == Orientation.portrait?  size.height * .25 + 50:  size.height * .35 + 50,
                 width: size.width,
                 color: pokemon.color,
                 child: Padding(

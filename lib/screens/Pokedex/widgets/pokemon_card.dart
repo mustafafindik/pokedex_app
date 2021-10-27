@@ -15,6 +15,8 @@ class PokemonCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var ori = MediaQuery.of(context).orientation;
+    Size size = MediaQuery.of(context).size;
     return InkWell(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailPage(pokemon: pokemon,)));
@@ -75,15 +77,15 @@ class PokemonCard extends StatelessWidget {
                 child: SvgPicture.asset(
                   'assets/icons/pokeball.svg',
                   color: Colors.white.withOpacity(0.15),
-                  height: 120,
+                  height: ori == Orientation.portrait?  size.height*0.14  :size.width*0.15,
                 ),
               ),
               Positioned(
                 bottom: 8,
                 right: 10,
                 child: SizedBox(
-                  height: 70,
-                  width: 70,
+                  height: ori == Orientation.portrait? size.height*0.08 :size.width*0.08 ,
+                  width: ori == Orientation.portrait?  size.height*0.08 :size.width*0.08 ,
                   child: Image.asset(pokemon.image),
                 ),
               )
