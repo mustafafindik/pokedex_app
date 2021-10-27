@@ -11,13 +11,15 @@ class TitleAndSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    var ori = MediaQuery.of(context).orientation;
+
     return Stack(
       children: <Widget>[
         Container(
           color: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           width: size.width,
-          height: size.height * 0.35,
+          height: ori == Orientation.portrait? size.height * 0.35 : size.height * 0.65 ,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
