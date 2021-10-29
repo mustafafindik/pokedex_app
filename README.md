@@ -15,7 +15,6 @@ Its a Demo, So have a just 10 Pokemon.
 
 ## ScreenShots EN
 Some screenshots on En (English) language
-
 _____________
 <p float="left">
  <img src="https://i.imgur.com/dp5MkZN.png"  style="width:250px;">
@@ -25,9 +24,9 @@ _____________
  <img src="https://i.imgur.com/hrYKNCt.png"  style="width:250px;">
 </p>
 
+
 ## ScreenShots TR
 Some screenshots on TR (Turkish) language
-
 _____________
 <p float="left">
  <img src="https://i.imgur.com/uz0ZXg0.png"  style="width:250px;">
