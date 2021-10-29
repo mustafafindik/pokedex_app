@@ -1,16 +1,38 @@
-# pokedex_app
+# Pokedex App
 
-A Pokedex Application
+A Pokedex Application for Demo
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Its a Demo, So have a just 10 Pokemon.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Techs and Lib
+- Multi language (flutter_localizations) (Just have En and TR for now)
+- flutter_svg
+- Landscape Support
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ScreenShots EN
+Some screenshots on En (English) language
+
+_____________
+<p float="left">
+ <img src="https://i.imgur.com/dp5MkZN.png"  style="width:300px;">
+ <img src="https://i.imgur.com/kj6cHPm.png"  style="width:300px;">
+ <img src="https://i.imgur.com/LKBGFph.png"  style="width:300px;">
+ <img src="https://i.imgur.com/01PUScB.png"  style="width:300px;">
+ <img src="https://i.imgur.com/hrYKNCt.png"  style="width:300px;">
+</p>
+
+## ScreenShots TR
+Some screenshots on TR (Turkish) language
+
+_____________
+<p float="left">
+ <img src="https://i.imgur.com/uz0ZXg0.png"  style="width:300px;">
+ <img src="https://i.imgur.com/j9LPOK4.png"  style="width:300px;">
+ <img src="https://i.imgur.com/utB3u0T.png"  style="width:300px;">
+ <img src="https://i.imgur.com/0zKKWGo.png"  style="width:300px;">
+ <img src="https://i.imgur.com/0UbgdnH.png"  style="width:300px;">
+</p>
