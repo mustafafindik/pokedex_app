@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedex_app/components/stat_card.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/models/pokemon.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class StatView extends StatelessWidget {
   const StatView({Key? key,required this.pokemon}) : super(key: key);
@@ -20,13 +20,13 @@ class StatView extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 40,),
-              StatCard(title: "HP",statValue: pokemon.stat.hp,),
-              StatCard(title: "Attack",statValue: pokemon.stat.attack,),
-              StatCard(title: "Defence",statValue: pokemon.stat.defense,),
-              StatCard(title: "Sp. Atk",statValue: pokemon.stat.spAtk,),
-              StatCard(title: "Sp. Def",statValue: pokemon.stat.spDef,),
-              StatCard(title: "Speed",statValue: pokemon.stat.speed,),
-              StatCard(title: "Total",statValue: pokemon.stat.getTotal(),),
+              StatCard(title: AppLocalizations.of(context)!.hp,statValue: pokemon.stat.hp,),
+              StatCard(title: AppLocalizations.of(context)!.attack,statValue: pokemon.stat.attack,),
+              StatCard(title: AppLocalizations.of(context)!.defence,statValue: pokemon.stat.defense,),
+              StatCard(title: AppLocalizations.of(context)!.spAttack,statValue: pokemon.stat.spAtk,),
+              StatCard(title: AppLocalizations.of(context)!.spDefence,statValue: pokemon.stat.spDef,),
+              StatCard(title: AppLocalizations.of(context)!.speed,statValue: pokemon.stat.speed,),
+              StatCard(title: AppLocalizations.of(context)!.total,statValue: pokemon.stat.getTotal(),),
             ],
           ),
 

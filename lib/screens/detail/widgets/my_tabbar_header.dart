@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/screens/detail/widgets/my_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MyTabBarHeader extends StatelessWidget {
   const MyTabBarHeader({
@@ -21,9 +22,9 @@ class MyTabBarHeader extends StatelessWidget {
       indicatorWeight: 3.0,
       indicatorSize: TabBarIndicatorSize.tab,
       tabs: [
-        MyTab(index: tabController.index,title: "About     ",tabIndex: 0,),
-        MyTab(index: tabController.index,title: "Stats",tabIndex: 1,),
-        MyTab(index: tabController.index,title: "Evolution",tabIndex: 2,),
+        MyTab(index: tabController.index,title: AppLocalizations.of(context)!.about,tabIndex: 0,),
+        MyTab(index: tabController.index,title: AppLocalizations.of(context)!.stats,tabIndex: 1,),
+        MyTab(index: tabController.index,title: AppLocalizations.of(context)!.evolution,tabIndex: 2,),
       ],
     );
   }

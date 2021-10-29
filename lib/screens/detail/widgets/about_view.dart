@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/models/pokemon.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AboutView extends StatelessWidget {
   const AboutView({Key? key,required this.pokemon}) : super(key: key);
@@ -46,7 +47,7 @@ class AboutView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 10,),
-                      const Text("Height",style: TextStyle(color:kLightTextColor)),
+                      Text(AppLocalizations.of(context)!.height,style: const TextStyle(color:kLightTextColor)),
                       const SizedBox(height: 10,),
                       Text(pokemon.height),
                       const SizedBox(height: 10,),
@@ -56,7 +57,7 @@ class AboutView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 10,),
-                      const Text("Weight",style: TextStyle(color:kLightTextColor),),
+                      Text(AppLocalizations.of(context)!.weight,style: const TextStyle(color:kLightTextColor),),
                       const SizedBox(height: 10,),
                       Text(pokemon.weight),
                       const SizedBox(height: 10,),
@@ -68,11 +69,11 @@ class AboutView extends StatelessWidget {
               ),
 
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: kDefaultPadding),
+             Padding(
+              padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
               child: Text(
-                "Weakness",
-                style: TextStyle(
+                AppLocalizations.of(context)!.weakness,
+                style: const TextStyle(
                     color:kTextColor,
                     fontWeight: FontWeight.w600
                 ),

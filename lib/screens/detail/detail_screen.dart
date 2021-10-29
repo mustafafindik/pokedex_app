@@ -71,7 +71,6 @@ class DetailPage extends StatelessWidget {
                             padding:
                                 const EdgeInsets.only(top: kDefaultPadding / 4),
                             height: kDefaultPadding * 2,
-                            width: size.width / 2.5,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: pokemon.types.map(

@@ -14,7 +14,7 @@ class PokemonGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     var ori = MediaQuery.of(context).orientation;
-    var pokemonList = getPokemonList();
+    var pokemonList = getPokemonList(context);
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),

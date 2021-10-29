@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokedex_app/constants.dart';
 import 'package:pokedex_app/models/evolution_chain.dart';
 import 'package:pokedex_app/models/pokemon.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class EvolutionView extends StatelessWidget {
   const EvolutionView({Key? key, required this.pokemon}) : super(key: key);
   final Pokemon pokemon;
@@ -19,9 +19,9 @@ class EvolutionView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: kDefaultPadding*1.5),
-                child: Text("Evolution Chain",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+               Padding(
+                padding: const EdgeInsets.symmetric(vertical: kDefaultPadding*1.5),
+                child: Text(AppLocalizations.of(context)!.evolution +" " + AppLocalizations.of(context)!.chain,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
