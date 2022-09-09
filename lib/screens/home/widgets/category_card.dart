@@ -15,9 +15,10 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        if(category.name=="Pokedex"){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> PokedexPage()));
+      onTap: () {
+        if (category.name == "Pokedex") {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const PokedexPage()));
         }
       },
       child: Padding(

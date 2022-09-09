@@ -31,9 +31,10 @@ class SearchBar extends StatelessWidget {
           controller: searchInputController,
           autofocus: false,
           onChanged: (value) {
+            // ignore: avoid_print
             print(value);
           },
-          decoration:  InputDecoration(
+          decoration: InputDecoration(
             hintText: AppLocalizations.of(context)!.searchText,
             hintStyle: const TextStyle(color: kIconColor, fontSize: 15),
             enabledBorder: InputBorder.none,

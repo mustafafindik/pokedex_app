@@ -3,7 +3,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:pokedex_app/constants.dart';
 
 class StatBar extends StatefulWidget {
-  const StatBar({Key? key,required this.statRatio }) : super(key: key);
+  const StatBar({Key? key, required this.statRatio}) : super(key: key);
   final double statRatio;
 
   @override
@@ -16,11 +16,10 @@ class _StatBarState extends State<StatBar> {
 
   @override
   void initState() {
-    SchedulerBinding.instance!.addPostFrameCallback((timeStamp) {
+    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
       width = _globalKey.currentContext!.size!.width;
       setState(() {});
     });
-    // TODO: implement initState
     super.initState();
   }
 
@@ -40,12 +39,11 @@ class _StatBarState extends State<StatBar> {
           Positioned(
             child: Container(
               height: 3,
-              width: width*widget.statRatio,
+              width: width * widget.statRatio,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                color:widget.statRatio>0.6 ? Colors.green: Colors.red,
+                color: widget.statRatio > 0.6 ? Colors.green : Colors.red,
               ),
-
             ),
           )
         ],

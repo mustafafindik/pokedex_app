@@ -19,7 +19,9 @@ class TitleAndAppBar extends StatelessWidget {
           color: Colors.white,
           width: size.width,
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-          height: ori == Orientation.portrait? size.height * 0.25: size.height * 0.45,
+          height: ori == Orientation.portrait
+              ? size.height * 0.25
+              : size.height * 0.45,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -62,6 +64,7 @@ class TitleAndAppBar extends StatelessWidget {
                   IconButton(
                     icon: const Icon(CupertinoIcons.list_bullet,
                         color: Colors.black),
+                    // ignore: avoid_print
                     onPressed: () => print("Menu"),
                   )
                 ],

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'widgets/pokemon_grid.dart';
 import 'widgets/title_and_appbar.dart';
@@ -10,16 +9,8 @@ class PokedexPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: const [
-          TitleAndAppBar(),
-          PokemonGrid()
-        ],
+        children: const [TitleAndAppBar(), PokemonGrid()],
       ),
     );
   }
 }
-
-
-
-
-

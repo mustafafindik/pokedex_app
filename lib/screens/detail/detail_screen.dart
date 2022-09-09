@@ -26,6 +26,7 @@ class DetailPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(CupertinoIcons.heart, color: Colors.white),
+            // ignore: avoid_print
             onPressed: () => print("Liked!"),
           ),
         ],
@@ -35,7 +36,9 @@ class DetailPage extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: ori == Orientation.portrait?  size.height * .25 + 50:  size.height * .35 + 50,
+                height: ori == Orientation.portrait
+                    ? size.height * .25 + 50
+                    : size.height * .35 + 50,
                 width: size.width,
                 color: pokemon.color,
                 child: Padding(
@@ -68,15 +71,15 @@ class DetailPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            padding:
-                                const EdgeInsets.only(top: kDefaultPadding / 4),
-                            height: kDefaultPadding * 2,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: pokemon.types.map(
-                                      (type) => TypeCard(type: type)).toList(),
-                            )
-                          ),
+                              padding: const EdgeInsets.only(
+                                  top: kDefaultPadding / 4),
+                              height: kDefaultPadding * 2,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: pokemon.types
+                                    .map((type) => TypeCard(type: type))
+                                    .toList(),
+                              )),
                           Text(pokemon.species,
                               textAlign: TextAlign.center,
                               style: const TextStyle(
@@ -90,17 +93,17 @@ class DetailPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  bottom: 0,
-                  child: Container(
-                    height: 50,
-                    width: size.width,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(30),
-                          topRight: Radius.circular(30)),
-                      color: Colors.white,
-                    ),
+                bottom: 0,
+                child: Container(
+                  height: 50,
+                  width: size.width,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30)),
+                    color: Colors.white,
                   ),
+                ),
               ),
               Positioned(
                 bottom: -15,
@@ -118,9 +121,9 @@ class DetailPage extends StatelessWidget {
                 child: SizedBox(
                   width: size.width,
                   child: Hero(
-                    tag:pokemon.id,
+                    tag: pokemon.id,
                     child: SizedBox(
-                      height: 150,
+                        height: 150,
                         width: 150,
                         child: Image.asset(pokemon.image)),
                   ),
@@ -132,11 +135,12 @@ class DetailPage extends StatelessWidget {
             child: Container(
               width: size.width,
               decoration: BoxDecoration(
-                border: Border.all(width: 0,color: Colors.white),
+                border: Border.all(width: 0, color: Colors.white),
                 color: Colors.white,
               ),
-
-              child: MyTabBar(pokemon: pokemon,),
+              child: MyTabBar(
+                pokemon: pokemon,
+              ),
             ),
           ),
         ],
