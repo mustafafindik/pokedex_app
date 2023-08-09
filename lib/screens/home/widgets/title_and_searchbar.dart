@@ -31,7 +31,7 @@ class TitleAndSearchBar extends StatelessWidget {
                 AppLocalizations.of(context)!.title,
                 style: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headlineSmall!
                     .copyWith(fontWeight: FontWeight.bold),
               ),
               const SearchBar(),

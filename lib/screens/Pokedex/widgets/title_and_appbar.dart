@@ -32,7 +32,7 @@ class TitleAndAppBar extends StatelessWidget {
                 "Pokedex",
                 style: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headlineSmall!
                     .copyWith(fontWeight: FontWeight.bold),
               ),
             ],
