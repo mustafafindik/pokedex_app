@@ -7,9 +7,9 @@ class PokedexPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
-        children: const [TitleAndAppBar(), PokemonGrid()],
+        children: [TitleAndAppBar(), PokemonGrid()],
       ),
     );
   }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokedex_app/constants.dart';
-import 'package:pokedex_app/screens/home/widgets/search_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TitleAndSearchBar extends StatelessWidget {
